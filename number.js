@@ -4,10 +4,9 @@ const numbers = {
     '7': 'Whizz'
 };
 
-function getNumber(number) {
+function saying(number) {
     let result = '';
     let keys = Object.keys(numbers);
-
     if (number.toString().indexOf(keys[0]) >= 0) {
         return numbers[keys[0]];
     }
@@ -15,9 +14,7 @@ function getNumber(number) {
         result += number % parseInt(key) === 0 ? numbers[key] : '';
     });
 
-    return  result === '' ? number.toString() : result;
+    return result ?  result:number.toString();
 }
 
-module.exports = {
-    getNumber
-};
+module.exports = {saying};

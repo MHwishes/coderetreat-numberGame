@@ -1,34 +1,33 @@
 const number=require("../number");
 describe("number",()=>{
-    it("",()=>{
-       expect('Fizz').toEqual(number.getNumber(3)) ;
+    it("contain 3",()=>{
+       expect(number.saying(3)).toEqual('Fizz') ;
     });
     it("include 3",()=>{
-        expect('Fizz').toEqual(number.getNumber(13)) ;
+        expect(number.saying(13)).toEqual('Fizz') ;
     });
     it("fiveTimes", () => {
-        expect('Buzz').toEqual(number.getNumber(5)) ;
+        expect(number.saying(5)).toEqual('Buzz') ;
 
     });
     it("threeTimes", () => {
-        expect('Fizz').toEqual(number.getNumber(9)) ;
+        expect(number.saying(9)).toEqual('Fizz') ;
 
     });
     it("sevenTimes", () => {
-        expect('Whizz').toEqual(number.getNumber(7)) ;
+        expect(number.saying(7)).toEqual('Whizz') ;
 
     });
-    it("threeTimes&fiveTimes", () => {
-        expect("FizzBuzz").toEqual(number.getNumber(60)) ;
+    it("threeTimes and fiveTimes", () => {
+        expect(number.saying(60)).toEqual('FizzBuzz') ;
 
     });
-    it("fiveTimes&sevenTimes", () => {
-        expect("BuzzWhizz").toEqual(number.getNumber(70)) ;
+    it("fiveTimes and sevenTimes", () => {
+        expect(number.saying(70)).toEqual('BuzzWhizz') ;
 
     });
     it("common number", () => {
-        expect("1").toEqual(number.getNumber(1)) ;
+        expect(number.saying(1)).toEqual('1') ;
 
     })
-
 });
